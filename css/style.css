@@ -1,0 +1,223 @@
+/* Styling body */
+body{
+	background-color: black;
+	color: whitesmoke;
+	margin-bottom: 0;
+}
+
+/* Styling header */
+header{
+	display: flex;
+	flex-direction: column;
+}
+/* Style Logo and icon container */
+#logo{
+	display: flex;
+	justify-content: space-between;
+}
+#logo p{
+	font-size: 3rem;
+	margin:0;
+	font-weight: 900;
+	cursor:pointer;
+}
+nav{
+	display: flex;
+	flex-direction: column;
+	padding:2vw;
+}
+nav a{
+	font-size: 1.5rem;
+	text-align: center;
+	line-height: 3rem;
+	color: whitesmoke;
+	text-decoration: none;
+	border-bottom: 1px solid DarkKhaki;
+	transition: color ease 300ms;
+}
+nav a:hover{
+	border-bottom: 1px solid whitesmoke;
+	color: DarkKhaki;
+}
+
+/* Styling main container */
+#big-image-container{
+	position: relative;
+	height: 60vw;
+}
+.slider{
+	width: 100%;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#tumbnails img{
+	width: 100%;
+	height: auto;
+}
+#big-image h1, #big-image p, #tumbnails p{
+	display: none;
+}
+#tumbnails{
+	display: flex;
+	padding: 3vw 0;
+}
+#tumbnails div{
+	flex-grow: 1;
+	cursor: pointer;
+}
+#tumbnails img{
+	border: 1px solid whitesmoke;
+}
+
+main>section+p{
+	display: none;
+}
+main>h1{
+	border-bottom: 1px solid papayawhip;
+	padding: 2vw 0;
+}
+/* Style accordion h1 */
+.accordion{
+	cursor: pointer;
+}
+.accordion-minus::after{
+	content: " -";
+}
+.accordion-plus::after{
+	content: " +";
+}
+
+/* Style with subheading text */
+article{
+	display: flex;
+	flex-direction: column;
+}
+article section{
+	display: flex;
+}
+article section img{
+	object-fit: cover;
+	width: 49%;
+	padding-right: 2vw;
+	height: auto;
+}
+.section-text{
+	width: 49%;
+	border-left: 1px solid whitesmoke;
+	padding-left: 2vw;
+}
+.section-text h2{
+	margin-top: 0;
+	text-transform: uppercase;
+}
+.section-text a{
+	color: papayawhip;
+	text-decoration: none;
+	display: block;
+	padding-bottom: 3vw;
+}
+
+/* Styling footer */
+footer{
+	text-align: center;
+	color: papayawhip;
+	background-color: rgb(34,34,34);
+}
+footer p{
+	margin: 1vw 0 0 0;
+	padding: 1vw 0;
+}
+
+/* Styling Desktop version */
+@media only screen and (min-width: 768px){
+	/* Style wraper */
+	#wraper{
+		width: 75%;
+		margin: auto;
+	}
+
+	/* Styling header */
+	header{
+			flex-direction: row;
+			justify-content: space-between;
+	}
+	#logo p{
+		display: none;
+	}
+	nav{
+		flex-direction: row;
+		padding: 0;
+	}
+	nav a{
+		padding:0 1vw;
+		font-size: 1rem;
+		border-bottom: none;
+	}
+	nav a:hover{
+		border-bottom: none;
+	}
+
+	/* Styling main container */
+	main>section{
+		display: flex;
+	}
+	#big-image{
+		flex-basis: 60%;
+		overflow: hidden;
+	}
+	#big-image-container{
+		max-height: 24vw;
+		overflow: hidden;
+		position: relative;
+	}
+	#big-image-container img{
+		transform: scale(1);
+		position: absolute;
+		
+	}
+
+	#tumbnails img{
+		max-width: 90px;
+		max-height: 50px;
+	}
+	#big-image h1, #big-image p, #tumbnails p{
+		display: block;
+		padding-left: 1vw;
+	}
+	#tumbnails p{
+		display: block;
+		margin: 0;
+	}
+	#tumbnails{
+		flex-direction: column;
+		flex-basis: 40%;
+		padding: 0 2vw 3vw 5vw;
+		justify-content: flex-start;
+	}
+	#tumbnails div{
+		display: flex;
+		margin-bottom: 20px;
+		flex-grow: 0;
+	}
+	main>section+p{
+		display: block;
+		margin: 0;
+		padding: 2vw;
+		background-color: rgb(34,34,34);
+		font-size: 1.2rem;
+	}
+
+	/* Style with subheading text */
+	article{
+		flex-direction: row;
+	}
+	article section img{
+		min-width: 0px;
+		padding-right: 1vw;
+	}
+	.section-text{
+		padding: 0 1vw;
+	}
+}
